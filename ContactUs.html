@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Times New Roman";
+}
+
+input[type=submit] {
+  background-color: #2C3539;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] {
+  background-color: #2C3539;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #000000;
+}
+input[type=reset]:hover {
+  background-color: #000000;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ebad96;
+  padding: 20px;
+    margin-left: 50px;
+	margin-right:50px;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+
+
+.margin{
+  margin-left: 50px;
+}
+
+ /* CSS for dropdown button/navbar */
+.navbar {
+  overflow: hidden;
+  background-color: #FFEBCD;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #CD5C5C;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ .myform  .required {
+    color: ORANGERED;
+ }
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+</style>
+</style>
+<script type = "text/javascript">
+function validate()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:""\n dotposition:");  
+  return false;  
+  }
+
+if( document.myform.Country.value == "0" ) {
+ alert( "Please select your state!" );
+return false;
+}
+
+return( true );
+}
+
+
+// JS for product quantity counter
+function increaseCount(e, el) {
+  var input = el.previousElementSibling;
+  var value = parseInt(input.value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  input.value = value;
+}
+function decreaseCount(e, el) {
+  var input = el.nextElementSibling;
+  var value = parseInt(input.value, 10);
+  if (value > 1) {
+    value = isNaN(value) ? 0 : value;
+    value--;
+    input.value = value;
+  }
+}
+
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "" || x == null) {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
+</script>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide">MMPD</a>
+	
+    <!-- Right-sided navbar links -->
+<div class="navbar" style="background-color:white;">
+  <a href="ContactUs.html">CONTACT <i class="fa fa-envelope"></i></a>
+  <a href="aboutus.html">ABOUT US <i class="fa fa-user"></i></a>
+  <div class="dropdown">
+    <button class="dropbtn">SHOP BRAND 
+      <i class="fa fa-shopping-cart"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="adidas.html">Adidas <i class="fa fa-cart-plus"></i></a>
+      <a href="Converse.html">Converse <i class="fa fa-cart-plus"></i></a>
+      <a href="nike.html">Nike <i class="fa fa-cart-plus"></i></a>
+	  <a href="VANS.html">Vans <i class="fa fa-cart-plus"></i></a>
+    </div>
+  </div> 
+</div>
+  </div>
+</div>
+
+<br><br><br>
+
+<div class="margin" style="text-align:center;">
+<h2>Contact Us</h2>
+<h4>Have any question, comment, suggestion, report, problem, message or anything to says? Feel free to contact us!</h4>
+</div>
+
+<div class="container">
+  <form name="myform"  method="post" action="http://www.example.com/" onsubmit="return validate();">
+  
+  <h3>Contact Form</h3><i style="font-size:30px; color:green;"></i></h1>
+    <p>
+    <label for="fname">First Name<span class="required">*</span>
+	<input type="text" id="fname" name="firstname" size="20" maxlength="20" placeholder="Your name.."  required></label><br/>
+	</p>
+
+    <p>
+    <label for="lname">Last Name<span class="required">*</span>
+    <input type="text" id="lname" name="lastname" size="20" maxlength="20" placeholder="Your last name.." required></label><br/>
+	</p>
+	
+	<p>
+    <label for="email">E-mail<span class="required">*</span>
+    <input type="text" id="email" name="email" size="30" maxlength="30" placeholder="Your E-mail.." required></label><br/>
+	</p>
+
+  <label for="state">State:</label>
+				<select name = "Country">
+				<option value = "0" selected>[Where are you from?]</option>
+				   <option value="15">Wilayah Persekutuan Kuala Lumpur</option>
+				   <option value="16">Wilayah Persekutuan Putrajaya</option>
+				   <option value="17">Wilayah Persekutuan Labuan</option>
+				   <option value="1">Perlis</option>
+				   <option value="2">Kedah</option>
+				   <option value="3">Pulau Pinang</option>
+				   <option value="4">Perak</option>
+				   <option value="5">Selangor</option>
+				   <option value="6">Kuala Lumpur</option>
+				   <option value="7">Terengganu</option>
+				   <option value="8">Kelantan</option>
+				   <option value="9">Pahang</option>
+				   <option value="10">Negeri Sembilan</option>
+				   <option value="11">Johor</option>
+				   <option value="12">Melaka</option>
+				   <option value="13">Sabah</option>
+				   <option value="14">Sarawak</option>
+				   </select>
+
+<hr>
+
+    <p>
+    <label for="subject">Subject<span class="required">*</span>
+    <input type="text" id="subject" name="subject" size="50" maxlength="50" placeholder="Subject.." required></label><br/>
+	</p>
+	
+	<p>
+    <label for="subject">Message<span class="required">*</span>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea></label><br/>
+	</p>
+
+	    <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="margin" style="text-align:center;">
+        <h4>MMPD HQ</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> MMPD Outlet Headquarters, Lorong Seri Murni 5, Taman Seri Murni, 13800, Butterworth, Penang</p>
+		<p><i class="fa fa-clock-o"></i> Operating Hour<br>
+		Monday - Friday (8:00am - 10:00pm)<br>
+		Saturday - Sunday (9:00am - 9:00pm)</p>
+        <p><i class="fa fa-fw fa-phone"></i> 0108832184</p>
+        <p><i class="fa fa-fw fa-envelope"></i> MMPD@gmail.com</p>
+</div>
+<br><br>
+</body>
+</html>

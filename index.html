@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<title>PROJECT_WDT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/stylesheet1.css">
+<link rel="stylesheet" href="css/stylesheet2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/bg.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("images/adidasbg.jpg");
+  min-height: 500px;
+  background-size: cover;
+}
+.bgimg-3 {
+  background-image: url("images/nikebg.jpg");
+  min-height: 500px;
+  background-size: cover;
+}
+
+<!-- css for dropdown button -->
+.navbar {
+  overflow: hidden;
+  background-color: #FFEBCD;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #CD5C5C;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.margin {
+  margin-left: 50px;
+}
+
+<!-- css for slideshow -->
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">MMPD</a>
+	
+    <!-- Right-sided navbar links -->
+<div class="navbar">
+  <a href="ContactUs.html">CONTACT <i class="fa fa-envelope"></i></a>
+  <a href="aboutus.html">ABOUT US <i class="fa fa-user"></i></a>
+  <div class="dropdown">
+    <button class="dropbtn">SHOP BRAND 
+      <i class="fa fa-shopping-cart"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="adidas.html">Adidas <i class="fa fa-cart-plus"></i></a>
+      <a href="Converse.html">Converse <i class="fa fa-cart-plus"></i></a>
+      <a href="nike.html">Nike <i class="fa fa-cart-plus"></i></a>
+	  <a href="VANS.html">Vans <i class="fa fa-cart-plus"></i></a>
+    </div>
+  </div> 
+</div>
+  </div>
+</div>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">FREE SHIPPING</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large">Get your favorite wears today!</span>
+    <p><a href="#best seller" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Shop Now</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+
+
+<!-- Best Seller -->
+<div class="w3-container" style="padding:128px 16px" id="best seller" target="blank">
+  <h3 class="w3-center">BEST SELLER</h3>
+  <p class="w3-center w3-large">Up to 20% discount available!</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="images/cv.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="CONVERSE Chuck Taylor All Stars 70 High">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/vn4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="VANS x Kide Slip On">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/cv2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="CONVERSE W CT AS CHUCK 70 HI">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/cv3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="CONVERSE Chuck Taylor All Star">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="images/ad8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Adidas Originals Continental 80">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/ad9.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="ADIDAS Alphatorsion">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/nk3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="NIKE Air Zoom Pegasus 37 'Fast City'">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/nk5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="NIKE Daybreak Women's">
+    </div>
+  </div>
+</div>
+
+<!-- Best Seller-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+<!-- Slideshow -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/ss1.jpg" style="width:100%">
+  <div class="text">Shop for Converse</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/ss2.jpg" style="width:100%">
+  <div class="text">Shop for Nike</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/adidasbg2.jpg" style="width:100%">
+  <div class="text">Shop for Adidas</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/ss3.jpg" style="width:100%">
+  <div class="text">Shop for VANS</div>
+</div>
+
+</div>
+
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+
+<!-- Shop Converse -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Converse</h3>
+      <p>With cotton canvas, vulcanised rubber and a whole lot of vision, Converse All Star changed the footwear world forever.
+	  <br>From b-ball courts to concert stages, skate spots to street blocks, their iconic self-expression and creativity makes an impact everywhere they step.
+	  <br>Now it’s your turn to carry on the Cons tradition…</p>
+	 
+      <p><a href="Converse.html" class="w3-button w3-black w3-padding-large w3-large"><i class="fa fa-shopping-cart"> </i>Shop Converse</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="images/converse.jpg" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Shop VANS -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>VANS</h3>
+      <p>When it comes to skate style, no one does it like Vans
+	  <br>Loved by rappers, rockers and skaters alike, celebrate their 50th anniversary with the freshest looks around.
+	  <br>Keep it classic in Old Skools and the Sk8-Hi, or hit the streets in their hoodies and t-shirts for an instant wardrobe step up.</p>
+	 
+      <p><a href="VANS.html" class="w3-button w3-black w3-padding-large w3-large"><i class="fa fa-shopping-cart"> </i>Shop VANS</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="images/vansbg.jpg" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Shop Adidas -->
+<div class="bgimg-2 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide"></span>
+	          <div class="w3-display-middle w3-display-hover">
+            <a href="adidas.html" class="w3-button w3-black w3-padding-large w3-large"><i class="fa fa-shopping-cart"> </i>Shop Adidas</a></p>
+          </div>
+  </div>
+</div>
+
+<!-- Shop Nike -->
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide"></span>
+	          <div class="w3-display-middle w3-display-hover">
+            <a href="nike.html" class="w3-button w3-black w3-padding-large w3-large"><i class="fa fa-shopping-cart"> </i>Shop Nike</a></p>
+          </div>
+  </div>
+</div>
+
+<!-- Logo -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter"> 
+	<img src="images/nike.jpg" style="width:40%">
+  </div>
+  <div class="w3-quarter">
+    <img src="images/adidas.png" style="width:40%">
+  </div>
+  <div class="w3-quarter">
+    <img src="images/conv.jpg" style="width:40%">
+  </div>
+  <div class="w3-quarter">
+    <img src="images/vans.jpg" style="width:40%">
+  </div>
+</div>
+
+
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32" id="subscribe">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%" required></p>
+    <input type="submit" class="w3-button w3-red w3-margin-bottom" onclick="subscribe()">
+</div>
+    <!-- Full Image -->
+    <img src="images/view.png" class="w3-image w3-greyscale" style="width:100%">
+
+
+
+<!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="contact">
+    <div class="w3-row-padding">
+
+      <div class="w3-col s4 w3-justify margin">
+        <h4>Our Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> MMPD Outlet Headquarters, Lorong Seri Murni 5, Taman Seri Murni, 13800, Butterworth, Penang</p>
+		<p><i class="fa fa-clock-o"></i> Operating Hour<br>
+		Monday - Friday (8:00am - 10:00pm)<br>
+		Saturday - Sunday (9:00am - 9:00pm)</p>
+        <p><i class="fa fa-fw fa-phone"></i> 0108832184</p>
+        <p><i class="fa fa-fw fa-envelope"></i> MMPD@gmail.com</p>
+        <h4>We accept</h4>
+		<p><i class="	fa fa-cc-visa"></i> Visa</p>
+        <p><i class="fa fa-cc-mastercard"></i> Master Card</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+      </div>
+	  
+	      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#best seller">Shop Now</a></p>
+        <p><a href="aboutus.html">About us</a></p>
+        <p><a href="ContactUs.html">Contact Us</a></p>
+        <p><a href="#subscribe">Subscribe</a></p>
+        <p><a href="ContactUs.html">We're hiring</a></p>
+        <p><a href="ContactUs.html">Help</a></p>
+      </div>
+	  
+    </div>
+  </footer>
+
+
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+function subscribe() {
+
+  alert("Thanks for subscription! You will received our special offer, news and more!");
+
+}
+
+// Best Saller Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+
+
+// Slideshow
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>

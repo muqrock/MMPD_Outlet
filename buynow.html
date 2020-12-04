@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Check Out</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #000000;
+  color: white;
+  font-size: 30px;
+}
+
+.content {
+  max-width: 60%;
+  margin: auto;
+  padding: auto;
+  background-color: white ;
+}
+
+.textblue {
+  color: blue;
+  font-weight: bold;
+}
+
+.content .required{
+    color: ORANGERED;
+ }
+
+.margin{
+  margin-left: 50px;
+}
+
+ /* CSS for Product quantity counter */
+ .counter {
+   width:120px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+   
+.up:hover, .down:hover {
+   color: #010200;
+}
+
+#cntr {
+   appearance:none;
+   border: 0;
+   background: coral;
+   text-align: center;
+   width:42px;
+   line-height:24px;
+   font-size:15px;
+   border-radius:5px;
+   color:white;
+}
+
+.up, .down {
+   display:block;
+   color:coral;
+   font-size:18px;
+   padding:0 7px;
+   margin:5px;
+   box-sizing:border-box;
+   cursor:pointer;
+   border-radius:20px;
+   width:24px;
+   line-height:24px;
+   height:24px;
+   user-select:none;
+}
+ 
+</style>
+
+
+<script type = "text/javascript">
+function validate()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }
+
+if( document.myform.Country.value == "0" ) {
+ alert( "Please select your state!" );
+return false;
+}
+
+return( true );
+}
+
+
+function showhide() {
+  var checkBox = document.getElementById("debit");
+  var text = document.getElementById("paydebit");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } 
+  else {
+     text.style.display = "none";
+  }
+}
+
+function showhide2() {
+  var checkBox = document.getElementById("bank");
+  var text = document.getElementById("paybank");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } 
+  else {
+     text.style.display = "none";
+  }
+}
+
+// JS for product quantity counter
+function increaseCount(e, el) {
+  var input = el.previousElementSibling;
+  var value = parseInt(input.value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  input.value = value;
+}
+function decreaseCount(e, el) {
+  var input = el.nextElementSibling;
+  var value = parseInt(input.value, 10);
+  if (value > 1) {
+    value = isNaN(value) ? 0 : value;
+    value--;
+    input.value = value;
+  }
+}
+
+</script>
+ </head>
+ <body>
+<div class="header">
+  <p><i class="fa fa-lock"></i> Secure Checkout</p>
+</div>
+
+
+<div class="content">
+<form name="myform"  method="post" action="#" onsubmit="return validate();">
+ <h1>Checkout <i class="fa fa-check-square-o" style="font-size:30px; color:green;"></i></h1>
+ 
+ <fieldset>
+ 
+   <legend>Enter Your Information:</legend>
+		 <hr>	  
+<b>Delivery Information <i class="fa fa-truck" style="font-size:25px;"></i></b>   
+	   <p>
+	    <label><i class="fa fa-user"></i> First Name:<span class="required">*</span> <input type="text" name="name" size="20" maxlength="20" required></label><br/>
+	   </p>   
+    
+	   <p>
+	    <label><i class="fa fa-user"></i> Last Name:<span class="required">*</span> <input type="text" name="name" size="20" maxlength="20" required></label><br/>
+       </p>
+	
+<i class="fa fa-envelope"></i> Email: <input type="text" name="email" maxlength="20"><br/>
+	   
+	   <p>
+	    <label><i class="fa fa-phone"></i> Phone Number:<span class="required">*</span> <input type="text" id="phone" name="phone" required></label><br/>
+	   </p>
+	   
+
+
+	
+	   <p><i class="fa fa-address-card-o"></i> Address:<span class="required">*</span>
+		<textarea rows="4" cols="40" id="comments" placeholder="Enter your delivery address here."></textarea>
+		</p>
+
+		
+        <p>
+State:
+				<select name = "Country">
+				<option value = "0" selected>[choose your state]</option>
+				   <option value="1">Perlis</option>
+				   <option value="2">Kedah</option>
+				   <option value="3">Pulau Pinang</option>
+				   <option value="4">Perak</option>
+				   <option value="5">Selangor</option>
+				   <option value="6">Kuala Lumpur</option>
+				   <option value="7">Terengganu</option>
+				   <option value="8">Kelantan</option>
+				   <option value="9">Pahang</option>
+				   <option value="10">Negeri Sembilan</option>
+				   <option value="11">Johor</option>
+				   <option value="12">Melaka</option>
+				   <option value="13">Sabah</option>
+				   <option value="14">Sarawak</option>
+				   </select>
+		</p>
+		
+
+	   <p>
+	    <label><i class="fa fa-institution"></i> City: <input type="text" name="city" placeholder="Butterworth" required></label><br/>
+		</P>		
+
+	   <p>
+	    <label>Postal Code: <input type="text" name="postcode" maxlength="5" size="5" placeholder="13800" required></label><br/>
+		</P>
+		 
+		 <hr>
+<p><b>Payment Information</b></p>
+Select your payment option:<br>
+  <input type="radio" name="payment" id="bank" value="bank" onclick="showhide2()"> Online Banking<br>
+  <input type="radio" name="payment" id="debit" value="debit" onclick="showhide()"> Credit / Debit Card<br>
+  <input type="radio" name="payment" value="7e"> Cash Payment at 7-Eleven<br>
+
+<br>
+
+<div id="paybank" style="display:none"><hr><div class="textblue">Online Banking</div>
+<p>Select your bank <i class="fa fa-bank"></i></p>
+        <p>
+Bank Name:
+				<select name = "bankname">
+				   <option value = "0" selected>[Select your bank]</option>
+				   <option value="1" onclick="showhide2()" id="Maybank">Maybank</option>
+				   <option value="2" onclick="showhide2()" id="CIMB Bank">CIMB Bank</option>
+				   <option value="3" onclick="showhide2()" id="Public Bank Berhad">Public Bank Berhad</option>
+				   <option value="4" onclick="showhide2()" id="RHB Bank">RHB Bank</option>
+				   <option value="5" onclick="showhide2()" id="Hong Leong Bank">Hong Leong Bank</option>
+				   <option value="6" onclick="showhide2()" id="Ambank">AmBank</option>
+				   <option value="7" onclick="showhide2()" id="UOB Malaysia Bank">UOB Malaysia Bank</option>
+				   <option value="8" onclick="showhide2()" id="Bank Rakyat">Bank Rakyat</option>
+				   <option value="9" onclick="showhide2()" id="OCBC Bank Malaysia">OCBC Bank Malaysia</option>
+				   <option value="10" onclick="showhide2()" id="HSBC Bank Malaysia">HSBC Bank Malaysia</option>
+				   <option value="11" onclick="showhide2()" id="Affin Bank">Affin Bank</option>
+				   <option value="12" onclick="showhide2()" id="Bank Islam Malaysia">Bank Islam Malaysia</option>
+				   <option value="13" onclick="showhide2()" id="Standard Chartered Bank Malaysia">Standard Chartered Bank Malaysia</option>
+				   <button onclick="showhide2()">Replace document</button><option value="14">CitiBank Malaysia</option>
+				   </select>
+		</p>
+
+
+</div>
+
+<div id="paydebit" style="display:none"><hr><div class="textblue">Credit / Debit Card</div>
+<p>Accepted Card Type:<br>
+<i class="fa fa-cc-visa" style="font-size:30px;"></i>
+<i class="fa fa-cc-mastercard" style="font-size:30px;"></i><br></p>
+<p>Enter your card information</p>
+<p><label for="cardname">Name on card: <input type="text" name="name" size="20" maxlength="20"></label></p>
+<p><label for="cardname">Card Number: <input type="text" name="name" size="20" maxlength="20"></label></p>
+
+<p><label for="cardname">Expiry Date: <input type="text" name="name" size="10" maxlength="10"></label></p>
+<p><label for="cardname">CVV: <input type="text" name="name" size="3" maxlength="3"></label></p>
+</div>
+
+
+
+
+		 <hr>
+<p><b>Shipping Option</b></p>
+Select your shipping option: <i class="fa fa-truck"></i><br>
+  <input type="radio" name="ship" value="pslj"> Poslaju<br>
+  <input type="radio" name="ship" value="jnt"> J&T Express<br>
+  <input type="radio" name="ship" value="njv"> Ninja Van<br>
+  <input type="radio" name="ship" value="dhl"> DHL Ecommerce<br>
+  <input type="radio" name="ship" value="gdex"> Gdex Express<br>
+
+
+<br>
+Quantity:
+<div class="counter">
+ <div class="down" onclick="decreaseCount(event, this)">-</div>
+  <input type="text" id="cntr" value="1">
+ <div class="up" onclick="increaseCount(event, this)">+</div>
+</div>
+
+
+         <br>
+		 <input type="submit" value="Place Order"/>
+		 <input type="reset" value="Reset"/>
+
+	</fieldset>
+	</form>
+</div>
+
+<h1 class="margin">THANKS FOR SHOPPING WITH US!</h1>
+
+	
+	</body>
+	</html>
