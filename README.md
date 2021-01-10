@@ -1,4 +1,6 @@
 # MMPD_Outlet
+See the website here: https://muqrock.github.io/MMPD_Outlet/
+
 This is our Malaysia Polytechnic project for course Web Design. We use Github Pages to hosting our website. Our website is about online shoes shopping website.
 
 This web project is made and adjusted from https://www.w3schools.com/w3css/w3css_templates.asp
